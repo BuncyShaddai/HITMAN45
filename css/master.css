@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Playball&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  min-width: 100vw;
+  color: #fff;
+  background: #0f1014;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Reveal */
+@keyframes reveal {
+  0% {
+    width: 80%;
+  }
+
+  50% {
+    width: 60%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes fade-down {
+  from{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to{
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.reveal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal-container{
+  animation: fade-down 1s forwards;
+  text-align: center;
+  animation-delay: 2s;
+}
+
+.reveal h1 {
+  font-size: 45px;
+  letter-spacing: 8px;
+  margin-bottom: 0;
+}
+
+.reveal p {
+  font-family: 'Playball', cursive;
+  font-size: 20px;
+}
+
+.reveal-overlay {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  right: 10%;
+  background: #13151a;
+  position: absolute;
+  z-index: -1;
+  animation: reveal 2s forwards;
+}
